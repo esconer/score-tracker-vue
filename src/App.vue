@@ -3,5 +3,5 @@
 </script>
 
 <template>
-<p class="text-lg text-red-600">Hello World</p>
+<p class="text-5xl text-blue-600">Hello World</p>
 </template> 
