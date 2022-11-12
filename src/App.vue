@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PlayerCard from './components/PlayerCard.vue';
+import PlayerCard from '@/components/PlayerCard.vue';
 </script>
 
 <template>
