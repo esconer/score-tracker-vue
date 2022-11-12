@@ -1,7 +1,7 @@
-<script lang="ts">
-
+<script setup lang="ts">
+import PlayerCard from './components/PlayerCard.vue';
 </script>
 
 <template>
-<p class="text-5xl text-blue-600">Hello World</p>
+	<PlayerCard />
 </template> 
