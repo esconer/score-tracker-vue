@@ -2,11 +2,62 @@
 import Circle from '@/assets/icons/circle.svg';
 import Cross from '@/assets/icons/cross.svg';
 import Right from '@/assets/icons/right.svg';
-import Dots from '@/assets/icons/sots.svg';
+import Dots from '@/assets/icons/dots.svg';
 </script>
+
+<style>
+		:root{
+			--bg-green: #058337;
+			--bg-blue: #1e6ee5;
+			--bg-pink: #c2185b;
+			--bg-lightblue: #e3eeff;
+		}
+		.svg-style path{ 
+			stroke:cyan; 
+
+		}
+	</style>
 
 <template>
 	<!-- NOTE: use the imported Circle, Cross etc int the :src of a image tag -->
 	<!-- <img :src="Circle" alt="circle" /> -->
-	Hello PlayerCard
+<div class="container flex justify-center">	
+<div class="playercard relative flex p-4 m-2 rounded bg-[var(--bg-lightblue)] max-w-[600px]">
+	<div class="player-detail w-3/5">
+	<p class="p-name text-xl"><span class="text-base text-slate-500">#1</span> I'm esconer</p>
+	<table class="text-xs border-spacing-3 my-1 border-slate-400 ...">
+		<tr>
+			<td class=" pr-2">Success Rate</td>
+			<td class="pr-2">79%</td>
+		</tr>
+		<tr>
+			<td class="pr-2">Error Rate</td>
+			<td class="pr-2">15%</td>
+		</tr>
+		<tr>
+			<td class="pr-2">skip Rate</td>
+			<td class="pr-2">79%</td>
+		</tr>
+		
+	</table>
+	<p class="text-2xl">Score <span>98.2</span></p>
+	</div>
+	<div class="action-el w-2/5 grid grid-cols-2 gap-x-2 ">
+		<div class="right-ac ">
+			<div class="bg-[var(--bg-green)] max-w-xl rounded"><img class="mx-auto" :src="Right" alt="Right"></div>
+			<p class="right-count text-center">10</p>
+		</div>
+		<div class="wrong-ac ">
+			<div class="bg-[var(--bg-pink)] rounded"><img class="mx-auto" :src="Cross" alt="Cross"></div>
+			<p class="wrong-count text-center">10</p>
+		</div>
+		<div class="skip-ac">
+			<div class="bg-[var(--bg-blue)] rounded"><img class="mx-auto" :src="Circle" alt="circle"></div>
+			<p class="skip-count text-center">10</p>
+		</div>
+	</div>
+	<span class="dots absolute bottom-1 right-0 "><img class="mx-auto h-7" :src="Dots" alt="dots"></span>
+</div>
+</div>
 </template>
+

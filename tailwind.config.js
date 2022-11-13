@@ -2,10 +2,11 @@
 module.exports = {
   content: [
     "./index.html",
-  "./src/**/*.{ts,tsx,vue}",
-],
+    "./src/**/*.{ts,tsx,vue}",
+  ],
   theme: {
     extend: {},
   },
+
   plugins: [],
 }
