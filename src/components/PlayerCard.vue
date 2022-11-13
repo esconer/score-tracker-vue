@@ -8,5 +8,70 @@ import Dots from '@/assets/icons/sots.svg';
 <template>
 	<!-- NOTE: use the imported Circle, Cross etc int the :src of a image tag -->
 	<!-- <img :src="Circle" alt="circle" /> -->
-	Hello PlayerCard
+<body>
+    <div class="container">
+        <div>
+            <h3>Total player 4</h3>
+            <span class="container2">
+				<p id="Player-num">#1</p>
+                <p id="Player-name">Sumit Dey</p>
+            </span>
+			<p>Success Rate 79%</p>
+			<p>Error Rate 15%</p>
+			<p>Skip Rate 6%</p>
+			<p id="Score">Score 98.2</p>
+        </div>
+        <div>
+            <h3>Total Questions 129</h3>
+            <span class="container2">
+				<div>
+					<img :src="Right" alt="right">
+					102
+				</div>
+				<div>
+					<img :src="Cross" alt="cross">
+					19
+				</div>
+				<div>
+					<img :src="Circle" alt="circle">
+					8
+				</div>
+            </span>
+        </div>
+    </div>
+</body>
 </template>
+
+<style>
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container2 {
+	display: flex;
+	justify-content: space-between;
+}
+h3 {
+	font-weight: bold;
+}
+
+P {
+	text-align: left;
+}
+
+#Player-num {
+	color: rgb(188, 185, 185);
+	text-align: left;
+}
+
+#Player-name {
+	font-weight: bold;
+	font-size: xl;
+}
+
+#Score {
+	font-weight: bold;
+	font-size: large;
+}
+</style>
