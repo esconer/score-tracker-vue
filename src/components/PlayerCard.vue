@@ -37,6 +37,11 @@ import Dots from '@/assets/icons/sots.svg';
 					8
 				</div>
             </span>
+			<span id="Option">	
+			<img :src="Dots" alt="dots">
+			<img :src="Dots" alt="dots">
+			<img :src="Dots" alt="dots">
+			</span>
         </div>
     </div>
 </body>
@@ -46,11 +51,13 @@ import Dots from '@/assets/icons/sots.svg';
 .container {
     display: flex;
     justify-content: space-around;
+	background-color: rgb(150, 208, 249);
 }
 
 .container2 {
 	display: flex;
 	justify-content: space-between;
+	text-align: center;
 }
 h3 {
 	font-weight: bold;
@@ -63,6 +70,10 @@ P {
 #Player-num {
 	color: rgb(188, 185, 185);
 	text-align: left;
+}
+
+#Option {
+	text-align: right;
 }
 
 #Player-name {
