@@ -9,9 +9,9 @@ import Dots from '@/assets/icons/sots.svg';
 	<!-- NOTE: use the imported Circle, Cross etc int the :src of a image tag -->
 	<!-- <img :src="Circle" alt="circle" /> -->
 <body>
-    <div class="container">
+    <div class="container1">
         <div>
-            <h3>Total player 4</h3>
+            <p id="Header">Total player 4</p>
             <span class="container2">
 				<p id="Player-num">#1</p>
                 <p id="Player-name">Sumit Dey</p>
@@ -22,7 +22,7 @@ import Dots from '@/assets/icons/sots.svg';
 			<p id="Score">Score 98.2</p>
         </div>
         <div>
-            <h3>Total Questions 129</h3>
+            <p id="Header">Total Questions 129</p>
             <span class="container2">
 				<div>
 					<img :src="Right" alt="right">
@@ -47,6 +47,10 @@ import Dots from '@/assets/icons/sots.svg';
 
 <style>
 .container {
+	display: flex;
+	justify-content: spa;
+}
+.container1 {
     display: flex;
     justify-content: space-around;
 	border-radius: 5%;
@@ -58,8 +62,11 @@ import Dots from '@/assets/icons/sots.svg';
 	justify-content: space-between;
 	text-align: center;
 }
-h3 {
+
+#Header {
 	font-weight: bold;
+	font-size: large;
+	text-align: center;
 }
 
 P {
@@ -69,6 +76,7 @@ P {
 #Player-num {
 	color: rgb(188, 185, 185);
 	text-align: left;
+	font-size: x-large
 }
 
 #Option {
@@ -76,12 +84,12 @@ P {
 }
 
 #Player-name {
-	font-weight: bold;
-	font-size: xl;
+	/* font-weight: bold; */
+	font-size: x-large;
 }
 
 #Score {
 	font-weight: bold;
-	font-size: large;
+	font-size: xx-large;
 }
 </style>
