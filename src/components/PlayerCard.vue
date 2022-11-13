@@ -25,15 +25,15 @@ import Dots from '@/assets/icons/sots.svg';
             <p id="Header">Total Questions 129</p>
             <span class="container2">
 				<div>
-					<img :src="Right" alt="right">
+					<img :src="Right" alt="right" id="Right">
 					102
 				</div>
 				<div>
-					<img :src="Cross" alt="cross">
+					<img :src="Cross" alt="cross" id="Cross">
 					19
 				</div>
 				<div>
-					<img :src="Circle" alt="circle">
+					<img :src="Circle" alt="circle" id="Circle">
 					8
 				</div>
             </span>
@@ -91,5 +91,20 @@ P {
 #Score {
 	font-weight: bold;
 	font-size: xx-large;
+}
+
+#Right {
+	background-color: green;
+	border-radius: 20%;
+}
+
+#Cross {
+	background-color: rgb(183, 3, 102);
+	border-radius: 20%;
+}
+
+#Circle {
+	background-color: rgb(24, 87, 248);
+	border-radius: 20%;
 }
 </style>
