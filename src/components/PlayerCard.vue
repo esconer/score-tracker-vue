@@ -12,6 +12,7 @@ import Dots from '@/assets/icons/sots.svg';
     <div class="container1">
         <div>
             <p id="Header">Total player 4</p>
+			<br>
             <span class="container2">
 				<p id="Player-num">#1</p>
                 <p id="Player-name">Sumit Dey</p>
@@ -23,7 +24,8 @@ import Dots from '@/assets/icons/sots.svg';
         </div>
         <div>
             <p id="Header">Total Questions 129</p>
-            <span class="container2">
+            <br>
+			<span class="container2">
 				<div>
 					<img :src="Right" alt="right" id="Right">
 					102
@@ -64,8 +66,8 @@ import Dots from '@/assets/icons/sots.svg';
 }
 
 #Header {
-	font-weight: bold;
-	font-size: large;
+	/* font-weight: bold; */
+	font-size: x-large;
 	text-align: center;
 }
 
@@ -76,16 +78,16 @@ P {
 #Player-num {
 	color: rgb(188, 185, 185);
 	text-align: left;
-	font-size: x-large
-}
-
-#Option {
-	text-align: right;
+	font-size: xx-large
 }
 
 #Player-name {
 	/* font-weight: bold; */
-	font-size: x-large;
+	font-size: xx-large;
+}
+
+#Option {
+	text-align: right;
 }
 
 #Score {
