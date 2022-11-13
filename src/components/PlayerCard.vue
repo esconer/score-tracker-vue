@@ -37,11 +37,9 @@ import Dots from '@/assets/icons/sots.svg';
 					8
 				</div>
             </span>
-			<span id="Option">	
+			<div id="Option">	
 			<img :src="Dots" alt="dots">
-			<img :src="Dots" alt="dots">
-			<img :src="Dots" alt="dots">
-			</span>
+			</div>
         </div>
     </div>
 </body>
