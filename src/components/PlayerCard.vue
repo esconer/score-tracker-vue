@@ -54,7 +54,7 @@ import Dots from '@/assets/icons/sots.svg';
     display: flex;
     justify-content: space-around;
 	border-radius: 5%;
-	background-color: rgb(150, 208, 249);
+	background-color: rgb(199, 223, 246);
 }
 
 .container2 {
