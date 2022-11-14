@@ -21,6 +21,17 @@ import Dots from '@/assets/icons/dots.svg';
 <template>
 	<!-- NOTE: use the imported Circle, Cross etc int the :src of a image tag -->
 	<!-- <img :src="Circle" alt="circle" /> -->
+
+	<!-- TODO: set default formatter volar -->
+	<!-- TODO: setup android devices view on browser for pixel perfect development -->
+
+	<!-- TODO: unnecessary Class container, playercard, right-ac, right-count etc -->
+	<!-- TODO: use hex color or use tailwind config -->
+	<!-- TODO: use self closing tag where there is no content inside -->
+	<!-- TODO: avoid using fixed width -->
+	<!-- TODO: remove the container div component itself is a container -->
+	<!-- TODO: avoid using table use grid instead -->
+	
 <div class="container flex justify-center">	
 <div class="playercard relative flex p-4 m-2 rounded bg-[var(--bg-lightblue)] max-w-[600px]">
 	<div class="player-detail w-3/5">
@@ -40,6 +51,7 @@ import Dots from '@/assets/icons/dots.svg';
 		</tr>
 		
 	</table>
+	<!-- TODO: span is unnecessary -->
 	<p class="text-2xl">Score <span>98.2</span></p>
 	</div>
 	<div class="action-el w-2/5 grid grid-cols-2 gap-x-2 ">
