@@ -8,7 +8,17 @@ import Dots from '@/assets/icons/sots.svg';
 <template>
 	<!-- NOTE: use the imported Circle, Cross etc int the :src of a image tag -->
 	<!-- <img :src="Circle" alt="circle" /> -->
-	<!-- Hello PlayerCard -->
+
+	<!-- TODO: set default formatter volar -->
+	<!-- TODO: setup android devices view on browser for pixel perfect development -->
+
+	<!-- TODO: comment out any code outside of the card and make a single card -->
+	<!-- TODO: avoid using fixed width -->
+	<!-- TODO: divs to groups different elements -->
+	<!-- TODO: avoid using float it causes side effects -->
+	<!-- TODO: intend of margins use flex, grids for better layout -->
+	<!-- TODO: Place the Dot -->
+
 		<header class="text-5xl p-4 mx-4 justify-center flex w-auto  "> Score Tracker </header>
 		<h4 class="flex pl-4 float-left text-xl w-auto ">Total Player : 3</h4>
 		<h4 class="text-xl  float-right flex mb-2 pr-4">Total Questions : 100</h4>
