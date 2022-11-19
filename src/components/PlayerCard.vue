@@ -6,70 +6,76 @@ import Dots from '@/assets/icons/dots.svg';
 </script>
 
 <style>
-		:root{
-			--bg-green: #058337;
-			--bg-blue: #1e6ee5;
-			--bg-pink: #c2185b;
-			--bg-lightblue: #e3eeff;
-		}
-		.svg-style path{ 
-			stroke:cyan; 
-
-		}
-	</style>
+:root {
+	--bg-green: #058337;
+	--bg-blue: #1e6ee5;
+	--bg-pink: #c2185b;
+	--bg-lightblue: #e3eeff;
+}
+</style>
 
 <template>
-	<!-- NOTE: use the imported Circle, Cross etc int the :src of a image tag -->
-	<!-- <img :src="Circle" alt="circle" /> -->
+	<!-- NOTE: use the imported Circle, Cross etc int the :src of a image tag done -->
+	<!-- <img :src="Circle" alt="circle" done/> -->
 
-	<!-- TODO: set default formatter volar -->
-	<!-- TODO: setup android devices view on browser for pixel perfect development -->
+	<!-- TODO: set default formatter volar  done-->
+	<!-- TODO: setup android devices view on browser for pixel perfect development done-->
 
-	<!-- TODO: unnecessary Class container, playercard, right-ac, right-count etc -->
-	<!-- TODO: use hex color or use tailwind config -->
-	<!-- TODO: use self closing tag where there is no content inside -->
-	<!-- TODO: avoid using fixed width -->
-	<!-- TODO: remove the container div component itself is a container -->
-	<!-- TODO: avoid using table use grid instead -->
-	
-<div class="container flex justify-center">	
-<div class="playercard relative flex p-4 m-2 rounded bg-[var(--bg-lightblue)] max-w-[600px]">
-	<div class="player-detail w-3/5">
-	<p class="p-name text-xl"><span class="text-base text-slate-500">#1</span> I'm esconer</p>
-	<table class="text-xs border-spacing-3 my-1 border-slate-400 ...">
-		<tr>
-			<td class=" pr-2">Success Rate</td>
-			<td class="pr-2">79%</td>
-		</tr>
-		<tr>
-			<td class="pr-2">Error Rate</td>
-			<td class="pr-2">15%</td>
-		</tr>
-		<tr>
-			<td class="pr-2">skip Rate</td>
-			<td class="pr-2">79%</td>
-		</tr>
-		
-	</table>
-	<!-- TODO: span is unnecessary -->
-	<p class="text-2xl">Score <span>98.2</span></p>
+	<!-- TODO: unnecessary Class container deleted it, playercard need it, right-ac need it, right-count need it etc -->
+	<!-- TODO: use hex color or use tailwind config done -->
+	<!-- TODO: use self closing tag where there is no content inside ?????????? -->
+	<!-- TODO: avoid using fixed width done-->
+	<!-- TODO: remove the container div component itself is a container  done-->
+	<!-- TODO: avoid using table use grid instead done-->
+
+	<!-- <div class="container flex justify-center"> -->
+	<div class="playercard relative flex p-4 m-2 rounded bg-[var(--bg-lightblue)] sm:w-9/10 ">
+		<div class="player-detail w-3/5">
+			<p class="p-name mb-3 text-xl"><span class="text-base text-slate-500">#1</span> I'm esconer</p>
+			<!-- <table class="text-xs border-spacing-3 my-1 border-slate-400 ...">
+					<tr>
+						<td class=" pr-2">Success Rate</td>
+						<td class="pr-2">79%</td>
+					</tr>
+					<tr>
+						<td class="pr-2">Error Rate</td>
+						<td class="pr-2">15%</td>
+					</tr>
+					<tr>
+						<td class="pr-2">skip Rate</td>
+						<td class="pr-2">79%</td>
+					</tr>
+
+				</table> -->
+			<!-- grid alternative -->
+			<div class="inner-details mb-3 leading-relaxed text-xs grid grid-cols-2 ">
+				<p>Success Rate</p>
+				<p>79.6%</p>
+				<p>Error Rate</p>
+				<p>79.6%</p>
+				<p>Skip Rate</p>
+				<p>79.6%</p>
+			</div>
+			<!-- TODO: span is unnecessary -->
+			<p class="text-2xl">Score <span>98.2</span></p>
+		</div>
+		<div class="action-el w-2/5 grid grid-cols-2 gap-x-2 ">
+			<div class="right-ac ">
+				<div class="bg-[var(--bg-green)] max-w-xl rounded"><img class="mx-auto" :src="Right" alt="Right">
+				</div>
+				<p class="right-count text-center">10</p>
+			</div>
+			<div class="wrong-ac ">
+				<div class="bg-[var(--bg-pink)] rounded"><img class="mx-auto" :src="Cross" alt="Cross"></div>
+				<p class="wrong-count text-center">10</p>
+			</div>
+			<div class="skip-ac">
+				<div class="bg-[var(--bg-blue)] rounded"><img class="mx-auto" :src="Circle" alt="circle"></div>
+				<p class="skip-count text-center">10</p>
+			</div>
+		</div>
+		<span class="dots absolute bottom-1 right-0 "><img class="mx-auto h-7" :src="Dots" alt="dots"></span>
 	</div>
-	<div class="action-el w-2/5 grid grid-cols-2 gap-x-2 ">
-		<div class="right-ac ">
-			<div class="bg-[var(--bg-green)] max-w-xl rounded"><img class="mx-auto" :src="Right" alt="Right"></div>
-			<p class="right-count text-center">10</p>
-		</div>
-		<div class="wrong-ac ">
-			<div class="bg-[var(--bg-pink)] rounded"><img class="mx-auto" :src="Cross" alt="Cross"></div>
-			<p class="wrong-count text-center">10</p>
-		</div>
-		<div class="skip-ac">
-			<div class="bg-[var(--bg-blue)] rounded"><img class="mx-auto" :src="Circle" alt="circle"></div>
-			<p class="skip-count text-center">10</p>
-		</div>
-	</div>
-	<span class="dots absolute bottom-1 right-0 "><img class="mx-auto h-7" :src="Dots" alt="dots"></span>
-</div>
-</div>
+	<!-- </div> -->
 </template>
 
