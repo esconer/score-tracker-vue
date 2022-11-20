@@ -4,4 +4,5 @@ import PlayerCard from '@/components/PlayerCard.vue';
 
 <template>
 	<PlayerCard />
+	<PlayerCard />
 </template> 

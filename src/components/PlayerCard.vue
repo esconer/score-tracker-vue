@@ -3,16 +3,26 @@ import Circle from '@/assets/icons/circle.svg';
 import Cross from '@/assets/icons/cross.svg';
 import Right from '@/assets/icons/right.svg';
 import Dots from '@/assets/icons/dots.svg';
+import { computed, ref } from 'vue';
+
+const rank = ref(10)
+const playerName = ref("I'm esconer")
+const totalCount = ref(150)
+const rightCount = ref(70)
+const wrongCount = ref(70)
+
+const attempted = computed(() => rightCount.value + wrongCount.value)
+const unattempted = computed(() => totalCount.value - attempted.value)
+const successRate = computed(() => rightCount.value / (attempted.value) * 100)
+const errorRate = computed(() => rightCount.value / (attempted.value) * 100)
+const skipRate = computed(() => rightCount.value / (attempted.value) * 100)
+const score = computed(() => rightCount.value / (attempted.value) * 100)
+
+
+
 </script>
 
-<style>
-:root {
-	--bg-green: #058337;
-	--bg-blue: #1e6ee5;
-	--bg-pink: #c2185b;
-	--bg-lightblue: #e3eeff;
-}
-</style>
+
 
 <template>
 	<!-- NOTE: use the imported Circle, Cross etc int the :src of a image tag done -->
@@ -31,7 +41,7 @@ import Dots from '@/assets/icons/dots.svg';
 	<!-- <div class="container flex justify-center"> -->
 	<div class="playercard relative flex p-4 m-2 rounded bg-[var(--bg-lightblue)] sm:w-9/10 ">
 		<div class="player-detail w-3/5">
-			<p class="p-name mb-3 text-xl"><span class="text-base text-slate-500">#1</span> I'm esconer</p>
+			<p class="p-name mb-3 text-xl"><span class="text-base text-slate-500">#{{ rank }}</span> I'm esconer</p>
 			<!-- <table class="text-xs border-spacing-3 my-1 border-slate-400 ...">
 					<tr>
 						<td class=" pr-2">Success Rate</td>
@@ -45,37 +55,45 @@ import Dots from '@/assets/icons/dots.svg';
 						<td class="pr-2">skip Rate</td>
 						<td class="pr-2">79%</td>
 					</tr>
-
 				</table> -->
 			<!-- grid alternative -->
 			<div class="inner-details mb-3 leading-relaxed text-xs grid grid-cols-2 ">
 				<p>Success Rate</p>
-				<p>79.6%</p>
+				<p>{{ successRate }}%</p>
 				<p>Error Rate</p>
-				<p>79.6%</p>
+				<p>{{ errorRate }}%</p>
 				<p>Skip Rate</p>
-				<p>79.6%</p>
+				<p>{{ skipRate }}%</p>
 			</div>
 			<!-- TODO: span is unnecessary -->
-			<p class="text-2xl">Score <span>98.2</span></p>
+			<p class="text-2xl">Score {{ score }}</p>
 		</div>
 		<div class="action-el w-2/5 grid grid-cols-2 gap-x-2 ">
 			<div class="right-ac ">
 				<div class="bg-[var(--bg-green)] max-w-xl rounded"><img class="mx-auto" :src="Right" alt="Right">
 				</div>
-				<p class="right-count text-center">10</p>
+				<p class="right-count text-center">{{ rightCount }}</p>
 			</div>
 			<div class="wrong-ac ">
 				<div class="bg-[var(--bg-pink)] rounded"><img class="mx-auto" :src="Cross" alt="Cross"></div>
-				<p class="wrong-count text-center">10</p>
+				<p class="wrong-count text-center">{{ wrongCount }}</p>
 			</div>
 			<div class="skip-ac">
-				<div class="bg-[var(--bg-blue)] rounded"><img class="mx-auto" :src="Circle" alt="circle"></div>
-				<p class="skip-count text-center">10</p>
+				<div class="bg-my-blue rounded"><img class="mx-auto" :src="Circle" alt="circle"></div>
+				<p class="skip-count text-center">{{ skipCount }}</p>
 			</div>
 		</div>
 		<span class="dots absolute bottom-1 right-0 "><img class="mx-auto h-7" :src="Dots" alt="dots"></span>
 	</div>
 	<!-- </div> -->
+
 </template>
 
+<style>
+:root {
+	--bg-green: #058337;
+	--bg-blue: #1e6ee5;
+	--bg-pink: #c2185b;
+	--bg-lightblue: #e3eeff;
+}
+</style>
