@@ -2,7 +2,7 @@
   "name": "score-tracker-vue",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --open",
+    "dev": "vite --open --host",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",

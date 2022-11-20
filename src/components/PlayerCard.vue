@@ -22,8 +22,6 @@ import Dots from '@/assets/icons/dots.svg';
 	<body>
 		<div class="container1">
 			<div>
-				<p id="Header">Total player 4</p>
-				<br>
 				<span class="container2">
 					<p id="Player-num">#1</p>
 					<p id="Player-name">Sumit Dey</p>
@@ -34,8 +32,6 @@ import Dots from '@/assets/icons/dots.svg';
 				<p id="Score">Score 98.2</p>
 			</div>
 			<div>
-				<p id="Header">Total Questions 129</p>
-				<br>
 				<!-- TODO: use grid for better layout -->
 				<span class="container2">
 					<div>
@@ -49,6 +45,8 @@ import Dots from '@/assets/icons/dots.svg';
 					<div>
 						<img :src="Circle" alt="circle" id="Circle">
 						8
+					</div>
+					<div class="flex w-4 h-4 bg-[#1e6ee5]">
 					</div>
 				</span>
 				<div id="Option">
@@ -65,7 +63,7 @@ import Dots from '@/assets/icons/dots.svg';
 	display: flex;
 	/* TODO: spa is a invalid value for justify-content*/
 	/* TODO: Invoke intellisense for getting possible valid values */
-	justify-content: spa;
+	justify-content: space-around;
 }
 
 .container1 {
